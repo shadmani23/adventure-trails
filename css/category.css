@@ -1,0 +1,442 @@
+html, body {
+  width: 100%;
+}
+body{
+  font:15px/1.5 Arial, Helvetica, sans-serif;
+  padding:0;
+  margin:0;
+  background-color: #ece9e4;
+}
+/*GLOBAL*/
+.container{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+}
+h1, h3,ul,p{
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  background: white;
+  color: white;
+  padding: 0 0 80px 10%;
+  margin-bottom: 50px;
+  margin-top: 0;
+  border:1px solid #ccc;
+}
+/*HEADER*/
+header{
+  background-color: #313943;
+  color:white;
+  padding-top:30px;
+  min-height: 70px;
+}
+header a{
+  color:white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+header li{
+  float:left;
+  display:inline;
+  padding:0 20px;
+}
+header #branding{
+  float: left;
+}
+header #branding a{
+  text-transform: none;
+}
+header nav{
+  float: right;
+  margin-top: 10px;
+}
+
+.tab-wrap {
+  width: 100%;
+  margin-left: 0%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: -106px;
+}
+
+input[type="radio"][name="tabs"] {
+  position: absolute;
+  z-index: -1;
+}
+input[type="radio"][name="tabs"]:checked + .tab-label-content label {
+  color: #555;
+}
+input[type="radio"][name="tabs"]:checked + .tab-label-content .tab-content {
+  display: block;
+}
+input[type="radio"][name="tabs"]:nth-of-type(1):checked ~ .slide {
+  left: calc((100% / 5) * 0);
+}
+input[type="radio"][name="tabs"]:nth-of-type(2):checked ~ .slide {
+  left: calc((100% / 5) * 1);
+}
+input[type="radio"][name="tabs"]:nth-of-type(3):checked ~ .slide {
+  left: calc((100% / 5) * 2);
+}
+input[type="radio"][name="tabs"]:nth-of-type(4):checked ~ .slide {
+  left: calc((100% / 5) * 3);
+}
+input[type="radio"][name="tabs"]:nth-of-type(5):checked ~ .slide {
+  left: calc((100% / 5) * 4);
+}
+input[type="radio"][name="tabs"]:first-of-type:checked ~ .slide {
+  left: 0;
+}
+
+label {
+  cursor: pointer;
+  height: 35px;
+  color: #313943;
+  /*color: rgba(255, 255, 255, 0.8);*/
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+        align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+  width: 100%;
+}
+
+.slide {
+  background: #FF9900;
+  width: calc(100% / 5);
+  height: 4px;
+  position: absolute;
+  left: 0;
+  top: calc(100% - -17px);
+  -webkit-transition: left 0.3s ease-out;
+  transition: left 0.3s ease-out;
+}
+
+.tab-label-content {
+  width: 100%;
+}
+.tab-label-content .tab-content {
+  position: absolute;
+  top: 125px;
+  left: 0;
+  line-height: 130%;
+  display: none;
+}
+
+.container-box {
+	display: inline-block;
+  box-shadow: 0px 2px 10px 0px grey;
+  margin: 0 35px 35px 35px;
+  border-radius: 4px;
+  padding: 10px;
+  background: white;
+}
+
+.left-image, .right-text {
+	float: left;
+}
+
+.left-image {
+	width: 270px;
+  padding: 20px;
+}
+.right-text {
+	width: calc(100% - 310px);
+  color:#555;
+}
+.right-text h1 {
+  font-size:25px;
+  padding:20px;
+}
+.right-text p{
+  margin-left: 20px;
+  line-height: 25px;
+  font-size: 17px;
+}
+.sport-box-img{
+  overflow:hidden;
+  height: 170px;
+  width: 270px;
+  box-shadow: 3px 3px 5px gray;
+}
+
+.sport-box-img img{
+  transition: all 0.05s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.sport-box-img img:hover{
+  transform: scale(1.1);
+}
+
+.sport-box-img .overlay{
+  position:relative;
+  height: 170px;
+  width: 270px;
+  background-color: rgba(0,0,0,0.4);
+  transition: all 0.01s ease-in-out;
+}
+
+.sport-box-img .overlay a{
+  text-decoration: none;
+  font-size: 20px;
+  padding: 5px;
+  border: 1px #fff solid;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.sport-box-img:hover .overlay{
+  transform: translateY(-174px);
+}
+
+/*All Section*/
+
+.photo-grid {
+	text-align: center;
+}
+
+.photo-grid .sport-box-img {
+	display: inline-block;
+	margin: 0 24px 45px 24px;
+}
+
+/*MODAL*/
+.button{
+  position: fixed;
+  bottom:30px;
+  right:0;
+  background: #006064;
+  padding:10px;
+  margin-bottom:10px;
+  margin-right:18px;
+  font-size:18px;
+  color:white;
+  border:2px #006064 solid;
+  border-radius:30px; 
+}
+.button:hover{
+  border :2px #212121 solid;
+    background:#212121;
+    cursor:pointer;
+}
+.Modal{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+.Modalcontent{
+  background-color: #f4f4f4;
+  margin: 15% auto;
+  padding:20px;
+  width:510px;
+  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
+}
+.Modalcontent h1{
+  text-align: center;
+  padding:20px;
+  font-size:25px;
+  color: #00BCD4;
+}
+.Modalcontent form{
+  text-align: center;
+  margin-left: 15px;
+}
+.Modalcontent #details input{
+  font-size: 18px;
+  float:left;
+  color:#000;
+  padding:10px;
+  border-top: none;
+  border-left: none;
+}
+.Modalcontent #details textarea{
+  font-size: 18px;
+  float:left;
+  color:#000;
+  width:460px;
+  font-family:Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  padding:10px;
+  border-top:none;
+    border-left: none;
+    border-right:none;
+}
+.Modalcontent form #FormBtn{
+  display: inline-block;
+  font-size: 18px;
+  background-color: #FF9800;
+  color: #FFF3E0;
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding:10px;
+}
+.Modalcontent form #FormBtn:hover{
+  background-color:#E65100;
+  text-decoration:none;
+  cursor: pointer;
+}
+
+.close{
+  float: right;
+  margin-top: -22px;
+  margin-right:-10px;
+  color:#ccc;
+  font-size: 30px;
+}
+.close:hover,.close:focus{
+  color:#000;
+  text-decoration:none;
+  cursor: pointer;
+}
+
+/*CONTACT SECTION*/
+#Contact #contact-container{
+  margin: 0px 25px;
+  overflow:hidden;
+}
+#Contact{
+  background-color: #307b6d;
+  padding: 20px;
+  color: white;
+}
+#Contact ul{
+  margin-left: 20px;
+}
+#Contact li{
+  float:left;
+  display: inline;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 0px 60px 0px 60px;
+}
+#Contact a{
+  text-decoration: none;
+  color:white;
+}
+
+
+/*FOOTER*/
+footer{
+  background-color: #262f33;
+  text-align: center;
+  color: white;
+}
+footer a{
+  text-decoration: none;
+  color:white;
+}
+.footer_elements{
+  display: inline-block;
+  width: 30%;
+  padding: 10px 0;
+}
+.footer_elements_left {
+  text-align: left;
+}
+.footer_elements_right {
+  text-align: right;
+}
+
+@media(max-width: 768px){
+  header #branding,
+  header nav,
+  header nav li,
+  #Contact h1,
+  #Contact form{
+    float:none;
+    text-align: center;
+    width: 100%;
+  }
+  .container{
+    width:100%;
+  }
+
+  header{
+    padding-bottom: 20px;
+  }
+  .Modalcontent{
+    width: 90%;
+  }
+  .Modalcontent #details form input,textarea{
+    float:none !important;
+    display: block;
+    width: 90% !important;
+  }
+
+  #Contact button{
+    display: block;
+    width: 100%;
+  }
+
+  #Contact form input[type="email"]{
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .footer_elements{
+    display: block;
+    text-align: center !important;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .photo-grid .sport-box-img {
+    margin: 0 0 20px 0;
+  }
+    
+}
+  
+@media screen and (max-width: 768px) {
+
+  .tab-wrap {
+    width: 90%;
+    margin-left: 5%;
+    top: -106px;
+  }
+  .container-box{
+    margin: 0 0 20px 0;
+  }
+  .left-image, .right-text {
+	float: none;
+	width: 100%;
+  }
+  
+  .left-image {
+	  text-align: center;
+	  padding: 0;
+  }
+  
+  .left-image .sport-box-img {
+	  display: inline-block;
+  }
+  
+  .right-text {
+	  text-align: justify;
+  }
+}
+
